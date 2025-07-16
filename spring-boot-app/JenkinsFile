@@ -36,7 +36,6 @@ sh 'echo -------------------------6'
       }
     }
     stage('Build and Push Docker Image') {
-      sh 'echo -------------------------7'
       environment {
         DOCKER_IMAGE = "abhishekf5/ultimate-cicd:${BUILD_NUMBER}"
         // DOCKERFILE_LOCATION = "spring-boot-app/Dockerfile"

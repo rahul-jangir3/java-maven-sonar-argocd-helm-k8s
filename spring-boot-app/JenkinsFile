@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'rahuljngr/maven-rahul-docker-agent:v1'
-      sh 'echo -------------------------1'
+      //sh 'echo -------------------------1'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
@@ -25,7 +25,7 @@ pipeline {
     stage('Static Code Analysis') {
       environment {
         SONAR_URL = "http://localhost:9000"
-        sh 'echo -------------------------4'
+        //sh 'echo -------------------------4'
       }
       steps {
         sh 'echo -------------------------5'
